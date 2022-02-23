@@ -1,0 +1,16 @@
+[{
+  "_id": {
+    "$oid": "620b756c97707be7b640e259"
+  },
+  "user_id": [
+    {
+      "$oid": "6209a69ebdc32604143bbf69"
+    },
+    {
+      "$oid": "620ee48dcd71c469f12de855"
+    }
+  ],
+  "core": "Phoenix",
+  "wood": "Maple",
+  "length": 38
+}]

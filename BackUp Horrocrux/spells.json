@@ -1,0 +1,13 @@
+[{
+  "_id": {
+    "$oid": "620f0076cd71c469f12de877"
+  },
+  "name": "Alohomora",
+  "description": "Unlock closed doors."
+},{
+  "_id": {
+    "$oid": "620f00e8cd71c469f12de87c"
+  },
+  "name": "Accio",
+  "description": "Items come to us."
+}]

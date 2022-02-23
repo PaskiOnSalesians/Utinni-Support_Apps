@@ -1,0 +1,42 @@
+[{
+  "_id": {
+    "$oid": "620b74f297707be7b640e243"
+  },
+  "name": "Potions",
+  "user_id": [
+    {
+      "$oid": "6209a69ebdc32604143bbf69"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "620b751c97707be7b640e244"
+  },
+  "name": "Chess",
+  "user_id": [
+    {
+      "$oid": "6209a69ebdc32604143bbf69"
+    },
+    {
+      "$oid": "6209a84abdc32604143bbf6a"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "620b752897707be7b640e245"
+  },
+  "name": "Snakes",
+  "user_id": [
+    null
+  ]
+},{
+  "_id": {
+    "$oid": "620b754497707be7b640e246"
+  },
+  "name": "Quiz",
+  "user_id": [
+    {
+      "$oid": "6209a84abdc32604143bbf6a"
+    }
+  ]
+}]

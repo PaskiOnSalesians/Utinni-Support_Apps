@@ -1,0 +1,51 @@
+[{
+  "_id": {
+    "$oid": "620b711297707be7b640e23e"
+  },
+  "name": "Ilvermorny",
+  "country": "United States"
+},{
+  "_id": {
+    "$oid": "620b71ed97707be7b640e23f"
+  },
+  "name": "Durmstrang",
+  "country": "Norway"
+},{
+  "_id": {
+    "$oid": "620b71f097707be7b640e240"
+  },
+  "name": "Beauxbatons",
+  "country": "France"
+},{
+  "_id": {
+    "$oid": "620fbe206e15a5e2ae59d802"
+  },
+  "name": "Hogwarts",
+  "country": "England",
+  "house_": {
+    "gryffindor": {
+      "id": {
+        "$oid": "620efd38cd71c469f12de863"
+      },
+      "name": "Gryffindor"
+    },
+    "slytherin": {
+      "id": {
+        "$oid": "620efd3bcd71c469f12de864"
+      },
+      "name": "Slytherin"
+    },
+    "ravenclaw": {
+      "id": {
+        "$oid": "620efd3dcd71c469f12de865"
+      },
+      "name": "Ravenclaw"
+    },
+    "hufflepuff": {
+      "id": {
+        "$oid": "620efd40cd71c469f12de866"
+      },
+      "name": "Hufflepuff"
+    }
+  }
+}]

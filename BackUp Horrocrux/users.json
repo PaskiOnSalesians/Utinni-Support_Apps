@@ -1,0 +1,45 @@
+[{
+  "_id": {
+    "$oid": "6209a69ebdc32604143bbf69"
+  },
+  "username": "DevPaski",
+  "password": "paskiadmin",
+  "firstname": "Paski",
+  "lastname": "Admin",
+  "email": "pasqual.penalver@sarria.salesians.com",
+  "gender": "male",
+  "school_id": {
+    "$oid": "620a298fe1d260332e1b12dc"
+  },
+  "wand_id": {
+    "$oid": "620a2991e1d260332e1b12dd"
+  },
+  "galleons": 10000,
+  "spells_id": [
+    {
+      "$oid": "620f0076cd71c469f12de877"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6209a84abdc32604143bbf6a"
+  },
+  "username": "Gerard",
+  "password": "gerardAdmin",
+  "firstname": "Gerard",
+  "lastname": "Admin",
+  "email": "gerard.ribes@sarria.salesians.com",
+  "gender": "male",
+  "wand": {
+    "$oid": "620a29a6e1d260332e1b12df"
+  },
+  "school": {
+    "$oid": "620b71ed97707be7b640e23f"
+  },
+  "galleons": 1000,
+  "spells_id": [
+    {
+      "$oid": "620f00e8cd71c469f12de87c"
+    }
+  ]
+}]

@@ -1,0 +1,22 @@
+[{
+  "_id": {
+    "$oid": "620ee48dcd71c469f12de855"
+  },
+  "firstname": "Harry",
+  "lastname": "Potter",
+  "gender": "male",
+  "school_id": {
+    "$oid": "620a298fe1d260332e1b12dc"
+  },
+  "wand_id": {
+    "$oid": "620b756c97707be7b640e259"
+  },
+  "spells_id": [
+    {
+      "$oid": "620f00e8cd71c469f12de87c"
+    },
+    {
+      "$oid": "620f0076cd71c469f12de877"
+    }
+  ]
+}]
