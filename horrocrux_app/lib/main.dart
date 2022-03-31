@@ -1,7 +1,5 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables
-
 import 'package:flutter/material.dart';
-import 'package:horrocrux_app/screens/login_screen.dart';
+import 'package:horrocrux_app/screens/auth_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const LoginScreen(),
+      home: const AuthScreen(),
     );
   }
 }

@@ -1,9 +1,7 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
-import '../services/auth_service.dart';
+import '../../services/auth_service.dart';
 import 'login_screen.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -17,7 +15,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
 var token, password, username, email;
 
   void _navigateNextScreen(BuildContext context){
-    Navigator.of(context).push(MaterialPageRoute(builder: (context) => LoginScreen()));
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => const LoginScreen()));
   }
 
   @override
@@ -27,7 +25,7 @@ var token, password, username, email;
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Image.asset('assets/logo/horrocrux_logo.png', width: 150, height: 150),
-          SizedBox(height: 40),
+          const SizedBox(height: 40),
           Container(
             alignment: Alignment.center,
             child: SizedBox(
@@ -36,7 +34,7 @@ var token, password, username, email;
                 children: [
                   TextField(
                     autocorrect: false,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       hintText: 'Username',
                       border: OutlineInputBorder()
                     ),
@@ -44,11 +42,11 @@ var token, password, username, email;
                       username = val;
                     }
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   TextField(
                     autocorrect: false,
                     textInputAction: TextInputAction.send,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       hintText: 'Email',
                       border: OutlineInputBorder()
                     ),
@@ -56,11 +54,11 @@ var token, password, username, email;
                       email = val;
                     }
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   TextField(
                     autocorrect: false,
                     textInputAction: TextInputAction.send,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       hintText: 'Password',
                       border: OutlineInputBorder()
                     ),
@@ -69,7 +67,7 @@ var token, password, username, email;
                       password = val;
                     }
                   ),
-                  SizedBox(height: 40),
+                  const SizedBox(height: 40),
                   TextButton(
                     onPressed: (){
                       AuthService().register(username, email, password).then((val){
@@ -86,7 +84,7 @@ var token, password, username, email;
                         }
                       });
                     },
-                    child: Text(
+                    child: const Text(
                       'Register',
                       style: TextStyle(
                         color: Colors.white
@@ -96,12 +94,12 @@ var token, password, username, email;
                       backgroundColor: MaterialStateProperty.all(Colors.purple)
                     )
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   TextButton(
                     onPressed: (){
                         _navigateNextScreen(context);
                       },
-                    child: Text(
+                    child: const Text(
                       'Go to Login',
                       style: TextStyle(
                         color: Colors.white

@@ -1,10 +1,8 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'register_screen.dart';
 
-import '../services/auth_service.dart';
+import '../../services/auth_service.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({ Key? key }) : super(key: key);
@@ -17,7 +15,7 @@ class _LoginScreenState extends State<LoginScreen> {
   var email, password, token;
 
   void _navigateNextScreen(BuildContext context){
-    Navigator.of(context).push(MaterialPageRoute(builder: (context) => RegisterScreen()));
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => const RegisterScreen()));
   }
 
   @override
@@ -27,7 +25,7 @@ class _LoginScreenState extends State<LoginScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Image.asset('assets/logo/horrocrux_logo.png', width: 150, height: 150),
-          SizedBox(height: 40),
+          const SizedBox(height: 40),
           Container(
             alignment: Alignment.center,
             child: SizedBox(
@@ -37,7 +35,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 children: [
                   TextField(
                     autocorrect: false,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       hintText: 'Email',
                       border: OutlineInputBorder()
                     ),
@@ -45,11 +43,11 @@ class _LoginScreenState extends State<LoginScreen> {
                       email = val;
                     }
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   TextField(
                     autocorrect: false,
                     textInputAction: TextInputAction.send,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       hintText: 'Password',
                       border: OutlineInputBorder()
                     ),
@@ -58,7 +56,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       password = val;
                     }
                   ),
-                  SizedBox(height: 40),
+                  const SizedBox(height: 40),
                   TextButton(
                     onPressed: (){
                       AuthService().login(email, password).then((val){
@@ -75,7 +73,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         }
                       });
                     },
-                    child: Text(
+                    child: const Text(
                       'Authenticate',
                       style: TextStyle(
                         color: Colors.white
@@ -85,12 +83,12 @@ class _LoginScreenState extends State<LoginScreen> {
                       backgroundColor: MaterialStateProperty.all(Colors.purple)
                     )
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   TextButton(
                     onPressed: (){
                         _navigateNextScreen(context);
                       },
-                    child: Text(
+                    child: const Text(
                       'Go to Register',
                       style: TextStyle(
                         color: Colors.white
