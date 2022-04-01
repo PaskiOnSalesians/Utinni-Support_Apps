@@ -34,14 +34,6 @@ class Mapgo extends StatefulWidget {
 }
 
 class _MapgoState extends State<Mapgo> {
-  double pinPillPosition = PIN_VISIBLE_POSITION;
-  double pinPillPosition2 = PIN_VISIBLE_POSITION;
-  double pinPillPosition3 = PIN_VISIBLE_POSITION;
-  double pinPillPosition4 = PIN_VISIBLE_POSITION;
-  double pinPillPosition5 = PIN_VISIBLE_POSITION;
-  double pinPillPosition6 = PIN_VISIBLE_POSITION;
-  double pinPillPosition7 = PIN_VISIBLE_POSITION;
-
   Future<void> _checkPermission() async {
     final serviceStatus = await Permission.locationWhenInUse.serviceStatus;
     final isGpsOn = serviceStatus == ServiceStatus.enabled;
@@ -67,6 +59,14 @@ class _MapgoState extends State<Mapgo> {
   void initState(){
     _checkPermission();
   }
+
+  double pinPillPosition = PIN_VISIBLE_POSITION;
+  double pinPillPosition2 = PIN_VISIBLE_POSITION;
+  double pinPillPosition3 = PIN_VISIBLE_POSITION;
+  double pinPillPosition4 = PIN_VISIBLE_POSITION;
+  double pinPillPosition5 = PIN_VISIBLE_POSITION;
+  double pinPillPosition6 = PIN_VISIBLE_POSITION;
+  double pinPillPosition7 = PIN_VISIBLE_POSITION;
 
   @override
   Widget build(BuildContext context) {
