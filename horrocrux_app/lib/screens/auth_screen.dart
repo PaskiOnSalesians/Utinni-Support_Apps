@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
-import 'package:horrocrux_app/widgets/button_acceder.dart';
-import 'package:horrocrux_app/widgets/button_registro.dart';
+import 'package:horrocrux_app/widgets/buttons_main_screen/button_acceder.dart';
+import 'package:horrocrux_app/widgets/buttons_main_screen/button_registro.dart';
 
 class AuthScreen extends StatefulWidget {
   const AuthScreen({ Key? key }) : super(key: key);
