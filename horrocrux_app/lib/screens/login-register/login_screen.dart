@@ -60,6 +60,9 @@ class _LoginScreenState extends State<LoginScreen> {
                           child: TextField(
                             autocorrect: false,
                             textInputAction: TextInputAction.send,
+                            style: const TextStyle(
+                              color: Colors.white
+                            ),
                             decoration: const InputDecoration(
                               filled: true,
                               hintText: "Email",
@@ -92,6 +95,9 @@ class _LoginScreenState extends State<LoginScreen> {
                           child: TextField(
                             autocorrect: false,
                             textInputAction: TextInputAction.send,
+                            style: const TextStyle(
+                              color: Colors.white
+                            ),
                             decoration: const InputDecoration(
                               filled: true,
                               hintText: "Contraseña",

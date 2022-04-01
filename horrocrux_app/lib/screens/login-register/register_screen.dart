@@ -60,6 +60,9 @@ var token, password, username, email;
                           child: TextField(
                             autocorrect: false,
                             textInputAction: TextInputAction.send,
+                            style: const TextStyle(
+                              color: Colors.white
+                            ),
                             decoration: const InputDecoration(
                               filled: true,
                               hintText: "Nombre de usuario",
@@ -92,6 +95,9 @@ var token, password, username, email;
                           child: TextField(
                             autocorrect: false,
                             textInputAction: TextInputAction.send,
+                            style: const TextStyle(
+                              color: Colors.white
+                            ),
                             decoration: const InputDecoration(
                               filled: true,
                               hintText: "Email",
@@ -124,6 +130,9 @@ var token, password, username, email;
                           child: TextField(
                             autocorrect: false,
                             textInputAction: TextInputAction.send,
+                            style: const TextStyle(
+                              color: Colors.white
+                            ),
                             decoration: const InputDecoration(
                               filled: true,
                               hintText: "Contraseña",
