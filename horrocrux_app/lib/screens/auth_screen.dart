@@ -19,7 +19,7 @@ class _AuthScreenState extends State<AuthScreen> {
       height: MediaQuery.of(context).size.height,
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: const AssetImage("assets/back/fondo_login.jpg"),
+          image: const AssetImage("assets/back/fondo_main.jpg"),
           fit: BoxFit.cover,
           colorFilter: ColorFilter.mode(
             Colors.purple.withOpacity(1.0),
