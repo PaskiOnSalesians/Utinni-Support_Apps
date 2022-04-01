@@ -1,4 +1,7 @@
+
 import 'package:flutter/material.dart';
+import 'package:horrocrux_app/widgets/button_acceder.dart';
+import 'package:horrocrux_app/widgets/button_registro.dart';
 
 class AuthScreen extends StatefulWidget {
   const AuthScreen({ Key? key }) : super(key: key);
@@ -7,37 +10,41 @@ class AuthScreen extends StatefulWidget {
   State<AuthScreen> createState() => _AuthScreenState();
 }
 
-class _AuthScreenState extends State<AuthScreen> with TickerProviderStateMixin {
+class _AuthScreenState extends State<AuthScreen> {
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Image.asset('assets/horrocrux_bg.gif', width: 32, height: 32,),   
-          SizedBox(
-            width: MediaQuery.of(context).size.width / 2,
-            height: 50,
-            child: TextButton(
-              onPressed: (){
-                
-              },
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Colors.purple),
-              ),
-              child: const Text(
-                'Sign In',
-                style: TextStyle(
-                  color: Colors.white
-                ),
-              )
-            ),
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: const AssetImage("assets/back/fondo_login.jpg"),
+          fit: BoxFit.cover,
+          colorFilter: ColorFilter.mode(
+            Colors.purple.withOpacity(1.0),
+            BlendMode.softLight
           )
-        ],
+        )
+      ),
+      child: Container(
+        decoration: BoxDecoration(
+          color: Colors.black.withOpacity(0.5)
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: const [
+            Image(
+              image: AssetImage('assets/logo/horrocrux_logo_white.png'),
+              width: 400,
+            ),
+            SizedBox(height: 40,),
+            ButtonAccess(),
+            SizedBox(height: 40,),
+            ButtonRegister()
+          ],
+        ),
       )
     );
   }

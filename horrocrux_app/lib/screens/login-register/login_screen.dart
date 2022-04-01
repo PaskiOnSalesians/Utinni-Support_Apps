@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'register_screen.dart';
 
 import '../../services/auth_service.dart';
 
@@ -13,10 +12,6 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   var email, password, token;
-
-  void _navigateNextScreen(BuildContext context){
-    Navigator.of(context).push(MaterialPageRoute(builder: (context) => const RegisterScreen()));
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -84,20 +79,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     )
                   ),
                   const SizedBox(height: 20),
-                  TextButton(
-                    onPressed: (){
-                        _navigateNextScreen(context);
-                      },
-                    child: const Text(
-                      'Go to Register',
-                      style: TextStyle(
-                        color: Colors.white
-                      ),
-                    ),
-                    style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.purple)
-                    )
-                  ),
+
                 ]
               ),
             ),
