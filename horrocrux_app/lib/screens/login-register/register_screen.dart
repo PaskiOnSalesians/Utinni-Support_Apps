@@ -1,6 +1,9 @@
+// ignore_for_file: prefer_typing_uninitialized_variables
+
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:horrocrux_app/screens/auth_screen.dart';
+import 'package:horrocrux_app/screens/mapgo.dart';
 
 import '../../services/auth_service.dart';
 
@@ -167,6 +170,8 @@ var token, password, username, email;
                                   textColor: Colors.white,
                                   fontSize: 16.0
                                 );
+
+                                Navigator.of(context).push(MaterialPageRoute(builder: (context) => const Mapgo()));
                               }
                             });
                           },
