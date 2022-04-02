@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:horrocrux_app/screens/auth_screen.dart';
 import 'package:horrocrux_app/screens/mapgo.dart';
-
 import '../../services/auth_service.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -16,10 +15,12 @@ class RegisterScreen extends StatefulWidget {
 
 class _RegisterScreenState extends State<RegisterScreen> {
 var token, password, username, email;
+bool _isObscure = true;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
@@ -136,17 +137,27 @@ var token, password, username, email;
                             style: const TextStyle(
                               color: Colors.white
                             ),
-                            decoration: const InputDecoration(
+                            decoration: InputDecoration(
                               filled: true,
                               hintText: "Contraseña",
+                              suffixIcon: IconButton(
+                                onPressed: (){
+                                  setState(() {
+                                    _isObscure = !_isObscure;
+                                  });
+                                },
+                                icon: Icon(
+                                  _isObscure ? Icons.visibility : Icons.visibility_off,
+                                  color: Colors.white,
+                                )),
                               //fillColor: Color(0xFFF0F0F0),
-                              contentPadding: EdgeInsets.fromLTRB(25,9,0,11),
+                              contentPadding: const EdgeInsets.fromLTRB(25,9,0,11),
                               border: InputBorder.none,
-                              hintStyle: TextStyle(
+                              hintStyle: const TextStyle(
                                 color: Colors.white
                               )
                             ),
-                            obscureText: true,
+                            obscureText: _isObscure,
                             onChanged: (val){
                               password = val;
                             }

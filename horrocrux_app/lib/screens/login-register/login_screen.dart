@@ -16,10 +16,12 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   var email, password, token;
+  bool _isObscure = true;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
@@ -101,17 +103,26 @@ class _LoginScreenState extends State<LoginScreen> {
                             style: const TextStyle(
                               color: Colors.white
                             ),
-                            decoration: const InputDecoration(
+                            decoration: InputDecoration(
                               filled: true,
                               hintText: "Contraseña",
-                              //fillColor: Color(0xFFF0F0F0),
-                              contentPadding: EdgeInsets.fromLTRB(25,9,0,11),
+                              suffixIcon: IconButton(
+                                onPressed: (){
+                                  setState(() {
+                                    _isObscure = !_isObscure;
+                                  });
+                                },
+                                icon: Icon(
+                                  _isObscure ? Icons.visibility : Icons.visibility_off,
+                                  color: Colors.white,
+                                )),
+                              contentPadding: const EdgeInsets.fromLTRB(25,9,0,11),
                               border: InputBorder.none,
-                              hintStyle: TextStyle(
+                              hintStyle: const TextStyle(
                                 color: Colors.white
                               )
                             ),
-                            obscureText: true,
+                            obscureText: _isObscure,
                             onChanged: (val){
                               password = val;
                             }

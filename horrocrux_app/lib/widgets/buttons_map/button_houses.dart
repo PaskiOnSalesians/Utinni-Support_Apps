@@ -1,4 +1,7 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
+import 'package:horrocrux_app/screens/info_page.dart';
 
 class BottonShowCasas extends StatelessWidget {
   const BottonShowCasas({
@@ -49,7 +52,7 @@ class BottonShowCasas extends StatelessWidget {
                         ),
                       ],
                     ),
-                    const SizedBox(width: 20),
+                    const SizedBox(width: 30),
                     Column(
                       children: const [
                         Text(
@@ -61,6 +64,17 @@ class BottonShowCasas extends StatelessWidget {
                         ),
                         Text('Punt d informació'),
                         Text('Mic mic'),
+                      ],
+                    ),
+                    const SizedBox(width: 30),
+                    Column(
+                      children: [
+                        IconButton(
+                          onPressed: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => const InfoPage()));
+                          },
+                          icon: Icon(Icons.home, color: Colors.purple, size: 32,)
+                        )
                       ],
                     )
                   ],

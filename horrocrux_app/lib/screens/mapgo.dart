@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:horrocrux_app/components/menu/main_menu.dart';
+import 'package:horrocrux_app/screens/auth_screen.dart';
 import 'package:horrocrux_app/widgets/buttons_map/button_forest.dart';
 import 'package:horrocrux_app/widgets/buttons_map/button_garden.dart';
 import 'package:horrocrux_app/widgets/buttons_map/button_house.dart';
@@ -73,6 +74,10 @@ class _MapgoState extends State<Mapgo> {
     return Scaffold(
         appBar: AppBar(
           title: const Text('Mapa districte Sarria'),
+          backgroundColor: Colors.purple,
+          leading: IconButton(onPressed: () {
+            Navigator.of(context).push(MaterialPageRoute(builder: (context) => const AuthScreen()));
+          }, icon: const Icon(Icons.arrow_back),),
         ),
         body: Stack(
           children: [
