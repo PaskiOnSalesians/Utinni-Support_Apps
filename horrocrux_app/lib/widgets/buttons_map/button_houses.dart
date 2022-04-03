@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:horrocrux_app/screens/info_page.dart';
+import 'package:horrocrux_app/screens/screens-main/info_page.dart';
 
 class BottonShowCasas extends StatelessWidget {
   const BottonShowCasas({

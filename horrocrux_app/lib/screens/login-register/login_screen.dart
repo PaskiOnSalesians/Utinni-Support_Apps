@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:horrocrux_app/screens/auth_screen.dart';
-import 'package:horrocrux_app/screens/mapgo.dart';
+import 'package:horrocrux_app/screens/screens-main/auth_screen.dart';
+import 'package:horrocrux_app/screens/screens-main/mapgo.dart';
 
 import '../../services/auth_service.dart';
 

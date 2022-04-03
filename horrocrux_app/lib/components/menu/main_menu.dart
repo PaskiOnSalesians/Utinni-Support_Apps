@@ -2,8 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:horrocrux_app/components/menu/circular_button.dart';
-import 'package:horrocrux_app/screens/mapgo.dart';
-import 'package:horrocrux_app/screens/settings.dart';
+import 'package:horrocrux_app/screens/screens-main/mapgo.dart';
+import 'package:horrocrux_app/screens/screens-main/settings.dart';
+import 'package:horrocrux_app/screens/screens-main/user_profile.dart';
 
 class MainMenu extends StatefulWidget {
   const MainMenu({Key? key}) : super(key: key);
@@ -104,7 +105,9 @@ class _MyMainMenuState extends State<MainMenu>
                     size: 35,
                     color: Colors.white,
                   ),
-                  onClick: () {},
+                  onClick: () {
+                     Navigator.of(context).push(MaterialPageRoute(builder: (context) => const UserProfile()));
+                  },
                 ),
               ),
               Transform.translate(

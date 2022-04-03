@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:horrocrux_app/screens/auth_screen.dart';
+import 'package:horrocrux_app/screens/screens-main/auth_screen.dart';
 
 void main() {
   runApp(const MyApp());
