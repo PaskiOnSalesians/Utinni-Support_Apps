@@ -139,13 +139,32 @@ class _UserProfileState extends State<UserProfile> {
                           color: const Color(0x99EFEEEE),
                           borderRadius: BorderRadius.circular(20.0)
                         ),
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: const [
-                            Text('Friends', style: TextStyle(fontSize: 20.0),),
-                            
-                          ],
+                        child: Container(
+                          width: MediaQuery.of(context).size.width / 1.1,
+                          height: MediaQuery.of(context).size.height / 3,
+                          decoration: BoxDecoration(
+                            color: const Color(0x99EFEEEE),
+                            borderRadius: BorderRadius.circular(20.0)
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children:  [
+                              const Text('Friends', style: TextStyle(fontSize: 20.0),),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Container(
+                                    width: MediaQuery.of(context).size.width / 1.3,
+                                    height: 2,
+                                    color: Colors.black,
+                                  ),
+                                ],
+                              )
+                              
+                            ],
+                          ),
                         )
                       ),
                     ],
