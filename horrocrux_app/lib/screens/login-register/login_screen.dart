@@ -72,7 +72,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             keyboardType: TextInputType.emailAddress,
                             decoration: const InputDecoration(
                               filled: true,
-                              hintText: "Username",
+                              hintText: "Nombre de usuario",
                               //fillColor: Color(0xFFF0F0F0),
                               contentPadding: EdgeInsets.fromLTRB(25,9,0,11),
                               border: InputBorder.none,
