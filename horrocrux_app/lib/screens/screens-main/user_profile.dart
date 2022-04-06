@@ -12,6 +12,8 @@ class UserProfile extends StatefulWidget {
 
 
 class _UserProfileState extends State<UserProfile> {
+  var username, token;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -88,15 +90,14 @@ class _UserProfileState extends State<UserProfile> {
                             onPressed: () {},
                             icon: const Icon(Icons.qr_code_rounded, size: 32)
                           ),
-                          IconButton(
-                            onPressed: (){},
-                            icon: const Icon(Icons.emoji_events_rounded, size: 32)
-                          )
+                          // IconButton(
+                          //   onPressed: (){},
+                          //   icon: const Icon(Icons.emoji_events_rounded, size: 32)
+                          // )
                         ],
                       ),
                     ],
                   ),
-                  
                 ],
               ),
             ),
@@ -112,16 +113,23 @@ class _UserProfileState extends State<UserProfile> {
                       Container(
                         width: MediaQuery.of(context).size.width / 1.2,
                         height: MediaQuery.of(context).size.height / 3,
-                        decoration: BoxDecoration(
-                          color: const Color(0x99EFEEEE),
-                          borderRadius: BorderRadius.circular(20.0)
-                        ),
-                        child: Row(
+                        color: Colors.white,
+                        child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.start,
-                          children: const [
-                            Text('Scores', style: TextStyle(fontSize: 20.0)),
-                            
+                          children: [
+                            const Text('Scores', style: TextStyle(fontSize: 20.0)),
+                            Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Container(
+                                    width: MediaQuery.of(context).size.width / 1.3,
+                                    height: 2,
+                                    color: Colors.black,
+                                  ),
+                                ],
+                              )
                           ],
                         )
                       ),
@@ -135,15 +143,12 @@ class _UserProfileState extends State<UserProfile> {
                       Container(
                         width: MediaQuery.of(context).size.width / 1.2,
                         height: MediaQuery.of(context).size.height / 3,
-                        decoration: BoxDecoration(
-                          color: const Color(0x99EFEEEE),
-                          borderRadius: BorderRadius.circular(20.0)
-                        ),
+                        color: Colors.white,
                         child: Container(
                           width: MediaQuery.of(context).size.width / 1.1,
                           height: MediaQuery.of(context).size.height / 3,
                           decoration: BoxDecoration(
-                            color: const Color(0x99EFEEEE),
+                            color: Colors.white,
                             borderRadius: BorderRadius.circular(20.0)
                           ),
                           child: Column(
