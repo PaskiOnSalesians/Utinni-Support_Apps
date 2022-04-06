@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:horrocrux_app/components/variables.dart';
 import 'package:horrocrux_app/screens/screens-main/mapgo.dart';
 
 class UserProfile extends StatefulWidget {
@@ -60,15 +61,17 @@ class _UserProfileState extends State<UserProfile> {
             SizedBox(
               child: Row(
                 children: [
-                  const SizedBox(width: 40),
-                  const CircleAvatar(
-                    radius: 60,
-                    backgroundColor: Colors.black,
-                  ),
-                  const SizedBox(width: 60),
-                  Column(
+                  SizedBox(width: MediaQuery.of(context).size.width / 12),
+                  Row(
                     children: [
-                      const Text('UserName'),
+                      Text(
+                        '@' + currentUsername,
+                        style: const TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold
+                        )
+                      ),
+                      SizedBox(width: MediaQuery.of(context).size.width / 5),
                       TextButton(
                         onPressed: (){},
                         child: const Text('Editar perfil', style: TextStyle(color: Colors.purple),),
@@ -90,10 +93,6 @@ class _UserProfileState extends State<UserProfile> {
                             onPressed: () {},
                             icon: const Icon(Icons.qr_code_rounded, size: 32)
                           ),
-                          // IconButton(
-                          //   onPressed: (){},
-                          //   icon: const Icon(Icons.emoji_events_rounded, size: 32)
-                          // )
                         ],
                       ),
                     ],
@@ -118,13 +117,19 @@ class _UserProfileState extends State<UserProfile> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            const Text('Scores', style: TextStyle(fontSize: 20.0)),
+                            const Text(
+                              'Scores',
+                              style: TextStyle(
+                                fontSize: 20.0,
+                                fontWeight: FontWeight.bold
+                              )
+                            ),
                             Column(
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Container(
-                                    width: MediaQuery.of(context).size.width / 1.3,
+                                    width: MediaQuery.of(context).size.width / 1.25,
                                     height: 2,
                                     color: Colors.black,
                                   ),
@@ -155,13 +160,19 @@ class _UserProfileState extends State<UserProfile> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.start,
                             children:  [
-                              const Text('Friends', style: TextStyle(fontSize: 20.0),),
+                              const Text(
+                                'Friends',
+                                style: TextStyle(
+                                  fontSize: 20.0,
+                                  fontWeight: FontWeight.bold
+                                )
+                              ),
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Container(
-                                    width: MediaQuery.of(context).size.width / 1.3,
+                                    width: MediaQuery.of(context).size.width / 1.25,
                                     height: 2,
                                     color: Colors.black,
                                   ),

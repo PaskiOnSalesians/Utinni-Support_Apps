@@ -2,9 +2,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:horrocrux_app/components/variables.dart';
 import 'package:horrocrux_app/screens/screens-main/auth_screen.dart';
 import 'package:horrocrux_app/screens/screens-main/mapgo.dart';
 import '../../services/auth_service.dart';
+
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({ Key? key }) : super(key: key);
@@ -14,8 +16,13 @@ class RegisterScreen extends StatefulWidget {
 }
 
 class _RegisterScreenState extends State<RegisterScreen> {
-var token, password, username, email;
-bool _isObscure = true;
+  var token, password, username, email;
+  bool _isObscure = true;
+
+  getUserData() async{
+    
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -174,6 +181,7 @@ bool _isObscure = true;
                             AuthService().register(username, email, password).then((val){
                               if(val.data['success']){
                                 token = val.data['token'];
+                                currentUsername = username;
                                 Fluttertoast.showToast(
                                   msg: 'Registro correcto',
                                   toastLength: Toast.LENGTH_SHORT,

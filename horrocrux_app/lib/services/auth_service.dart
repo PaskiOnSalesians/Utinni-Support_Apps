@@ -5,10 +5,10 @@ import 'package:fluttertoast/fluttertoast.dart';
 class AuthService {
   Dio dio = Dio();
 
-  login(email, password) async{
+  login(username, password) async{
     try{
       return await dio.post('http://51.83.97.10:3000/api/auth/signin', data: {
-        "email": email,
+        "username": username,
         "password": password
       });
     }
@@ -43,5 +43,9 @@ class AuthService {
         fontSize: 16.0
       );
     }
+  }
+
+  getUserData() async{
+    
   }
 }

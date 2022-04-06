@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:horrocrux_app/components/variables.dart';
 import 'package:horrocrux_app/screens/screens-main/auth_screen.dart';
 import 'package:horrocrux_app/screens/screens-main/mapgo.dart';
 
@@ -15,7 +16,7 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  var email, password, token;
+  var username, password, token;
   bool _isObscure = true;
 
   @override
@@ -71,7 +72,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             keyboardType: TextInputType.emailAddress,
                             decoration: const InputDecoration(
                               filled: true,
-                              hintText: "Email",
+                              hintText: "Username",
                               //fillColor: Color(0xFFF0F0F0),
                               contentPadding: EdgeInsets.fromLTRB(25,9,0,11),
                               border: InputBorder.none,
@@ -80,7 +81,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               )
                             ),
                             onChanged: (val){
-                              email = val;
+                              username = val;
                             }
                           ),
                         ),
@@ -136,9 +137,10 @@ class _LoginScreenState extends State<LoginScreen> {
                         height: 50,
                         child: TextButton(
                           onPressed: (){
-                            AuthService().login(email, password).then((val){
+                            AuthService().login(username, password).then((val){
                               if(val.data['success']){
                                 token = val.data['token'];
+                                currentUsername = username;
                                 Fluttertoast.showToast(
                                   msg: 'Acceso correcto',
                                   toastLength: Toast.LENGTH_SHORT,
