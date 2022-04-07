@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:horrocrux_app/screens/qr/qr_code.dart';
+import 'package:horrocrux_app/screens/qr/qr_scanner.dart';
 import 'package:horrocrux_app/screens/screens-main/user_profile.dart';
 
 class QrUser extends StatefulWidget {
@@ -74,7 +75,7 @@ class _QrUserState extends State<QrUser> {
                     height: MediaQuery.of(context).size.height / 6,
                     child: TextButton.icon(
                       onPressed: (){
-                        //Navigator.of(context).push(MaterialPageRoute(builder: (context) => const QrScan()));
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) =>  QRViewExample()));
                       }, label: const Text('Escanear código QR', style: TextStyle(color: Colors.white),),
                       icon: const Icon(Icons.scanner_rounded, color: Colors.white,),
                       style: ButtonStyle(
