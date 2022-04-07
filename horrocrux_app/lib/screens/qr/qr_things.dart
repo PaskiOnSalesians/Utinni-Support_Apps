@@ -75,7 +75,7 @@ class _QrUserState extends State<QrUser> {
                     height: MediaQuery.of(context).size.height / 6,
                     child: TextButton.icon(
                       onPressed: (){
-                        Navigator.of(context).push(MaterialPageRoute(builder: (context) =>  QRViewExample()));
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) =>  ScanScreen()));
                       }, label: const Text('Escanear código QR', style: TextStyle(color: Colors.white),),
                       icon: const Icon(Icons.scanner_rounded, color: Colors.white,),
                       style: ButtonStyle(
