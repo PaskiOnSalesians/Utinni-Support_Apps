@@ -19,10 +19,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
   var token, password, username, email;
   bool _isObscure = true;
 
-  getUserData() async{
-    
+  @override
+  void initState() {
+    super.initState();
   }
-
 
   @override
   Widget build(BuildContext context) {

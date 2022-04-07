@@ -28,13 +28,9 @@ class _CameraPageState extends State<CameraPage> {
         setState(() {});
       },
     );
-    @override
-    void dispose() {
-      controller.dispose();
-      super.dispose();
-    }
   }
 
+  @override
   Widget build(BuildContext context) {
     if (!controller.value.isInitialized) {
       return const SizedBox(
@@ -52,7 +48,7 @@ class _CameraPageState extends State<CameraPage> {
             onPressed: () {
               Navigator.pop(context);
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_back_ios,
               color: Colors.grey,
             ),
@@ -68,7 +64,7 @@ class _CameraPageState extends State<CameraPage> {
             ),
           ),
         ),
-        SizedBox(height: 30),
+        const SizedBox(height: 30),
         ElevatedButton(
           onPressed: _takePhoto,
           child: const Text("Hacer foto"),

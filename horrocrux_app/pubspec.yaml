@@ -41,6 +41,7 @@ dependencies:
   permission_handler: ^9.2.0
   camera: ^0.9.4+18
   gallery_saver: ^2.3.2
+  qr_flutter: ^4.0.0
 
 dev_dependencies:
   flutter_test:

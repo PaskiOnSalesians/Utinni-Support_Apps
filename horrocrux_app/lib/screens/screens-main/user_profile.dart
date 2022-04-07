@@ -1,5 +1,8 @@
+// ignore_for_file: prefer_typing_uninitialized_variables
+
 import 'package:flutter/material.dart';
 import 'package:horrocrux_app/components/variables.dart';
+import 'package:horrocrux_app/screens/qr/qr_things.dart';
 import 'package:horrocrux_app/screens/screens-main/mapgo.dart';
 
 class UserProfile extends StatefulWidget {
@@ -90,7 +93,9 @@ class _UserProfileState extends State<UserProfile> {
                       Row(
                         children: [
                           IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                             Navigator.of(context).push(MaterialPageRoute(builder: (context) => const QrUser()));
+                            },
                             icon: const Icon(Icons.qr_code_rounded, size: 32)
                           ),
                         ],

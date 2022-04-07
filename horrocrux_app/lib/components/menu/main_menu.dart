@@ -44,8 +44,6 @@ class _MyMainMenuState extends State<MainMenu>
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-
     return Stack(
       children: <Widget> [
         Positioned(

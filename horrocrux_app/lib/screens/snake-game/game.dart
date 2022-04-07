@@ -1,4 +1,4 @@
-// ignore_for_file: deprecated_member_use
+// ignore_for_file: deprecated_member_use, constant_identifier_names, use_key_in_widget_constructors, prefer_typing_uninitialized_variables
 
 import 'dart:async';
 import 'dart:math';

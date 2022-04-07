@@ -41,7 +41,7 @@ class _SettingsPageState extends State<SettingsPage> {
           onPressed: () {
             Navigator.pop(context);
           },
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back_ios,
             color: Colors.grey,
           ),
@@ -51,60 +51,60 @@ class _SettingsPageState extends State<SettingsPage> {
         padding: const EdgeInsets.only(left: 30, right: 30),
         child: ListView(
           children: [
-            SizedBox(height: 10.0),
+            const SizedBox(height: 10.0),
             Row(
-              children: [
+              children: const [
                 Text(
                   'GENERAL',
                   style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                 ),
               ],
             ),
-            Divider(
+            const Divider(
               height: 2,
               thickness: 2,
               color: Colors.black,
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             buildAccountOption(context, "Languages"),
             buildAccountOption(context, "Themes"),
             buildOnOffOption("Sounds in app", valSounds, onChangeSound),
-            SizedBox(height: 30.0),
+            const SizedBox(height: 30.0),
             Row(
-              children: [
+              children: const [
                 Text(
                   'NOTIFICATIONS',
                   style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                 ),
               ],
             ),
-            Divider(
+            const Divider(
               height: 2,
               thickness: 2,
               color: Colors.black,
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             buildOnOffOption(
                 "Notifications", valNotifications, onChangeNotifications),
-            SizedBox(height: 30.0),
+            const SizedBox(height: 30.0),
             Row(
-              children: [
+              children: const [
                 Text(
                   'HELP & SUPPORT',
                   style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                 ),
               ],
             ),
-            Divider(
+            const Divider(
               height: 2,
               thickness: 2,
               color: Colors.black,
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             buildAccountOption(context, "Help"),
             buildAccountOption(context, "FAQ"),
-            SizedBox(height: 30),
-            ButtonBar()
+            const SizedBox(height: 30),
+            const ButtonBar()
           ],
         ),
       ),
@@ -119,7 +119,7 @@ class _SettingsPageState extends State<SettingsPage> {
         children: [
           Text(
             title,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.w500,
               color: Colors.black,
@@ -181,11 +181,11 @@ class _SettingsPageState extends State<SettingsPage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(line1),
-                  SizedBox(height: 8),
+                  const SizedBox(height: 8),
                   Text(line2),
-                  SizedBox(height: 8),
+                  const SizedBox(height: 8),
                   Text(line3),
-                  SizedBox(height: 8),
+                  const SizedBox(height: 8),
                   Text(line4),
                 ],
               ),
@@ -194,7 +194,7 @@ class _SettingsPageState extends State<SettingsPage> {
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
-                  child: Text("Close"),
+                  child: const Text("Close"),
                 ),
               ],
             );
@@ -208,7 +208,7 @@ class _SettingsPageState extends State<SettingsPage> {
           children: [
             Text(
               title,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.w500,
                 color: Colors.black,

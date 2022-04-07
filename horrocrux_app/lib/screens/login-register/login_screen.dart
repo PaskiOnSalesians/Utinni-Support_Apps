@@ -20,6 +20,11 @@ class _LoginScreenState extends State<LoginScreen> {
   bool _isObscure = true;
 
   @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
