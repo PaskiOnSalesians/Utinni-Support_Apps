@@ -182,8 +182,7 @@ class _UserProfileState extends State<UserProfile> {
                                     color: Colors.black,
                                   ),
                                 ],
-                              )
-                              
+                              ) 
                             ],
                           ),
                         )
