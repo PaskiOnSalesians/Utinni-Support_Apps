@@ -2,6 +2,10 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:horrocrux_app/components/variables.dart';
+import 'package:horrocrux_app/screens/screens-main/user_profile.dart';
+import 'package:horrocrux_app/services/auth_service.dart';
 
 class ScanScreen extends StatefulWidget {
   const ScanScreen({Key? key}) : super(key: key);
@@ -59,7 +63,7 @@ class _ScanState extends State<ScanScreen> {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
                 child: Text(
-                  _scanBarcode,
+                  newFriend = _scanBarcode,
                   textAlign: TextAlign.center,
                 ),
               ),
@@ -74,7 +78,20 @@ class _ScanState extends State<ScanScreen> {
     try {
       barcodeScanRes = await FlutterBarcodeScanner.scanBarcode(
           '#ff6666', 'Cancel', true, ScanMode.QR);
-      print(barcodeScanRes);
+      AuthService().updateFriends(currentUserId, barcodeScanRes).then((val){
+        if(val.data != null){
+          Fluttertoast.showToast(
+            msg: 'Amigo añadido',
+            toastLength: Toast.LENGTH_SHORT,
+            gravity: ToastGravity.BOTTOM,
+            backgroundColor: Colors.green,
+            textColor: Colors.white,
+            fontSize: 16.0
+          );
+
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) => const UserProfile()));
+        }
+      });
     } on PlatformException {
       barcodeScanRes = 'Failed to get platform version.';
     }

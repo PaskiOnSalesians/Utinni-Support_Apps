@@ -75,11 +75,16 @@ class _QrUserState extends State<QrUser> {
                     height: MediaQuery.of(context).size.height / 6,
                     child: TextButton.icon(
                       onPressed: (){
-                        Navigator.of(context).push(MaterialPageRoute(builder: (context) =>  ScanScreen()));
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) =>  const ScanScreen()));
                       }, label: const Text('Escanear código QR', style: TextStyle(color: Colors.white),),
                       icon: const Icon(Icons.scanner_rounded, color: Colors.white,),
                       style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all(Colors.green),
+                        shape: MaterialStateProperty.all(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30.0),
+                          )
+                        ),
                       ),
                     ),
                   ),
@@ -94,6 +99,11 @@ class _QrUserState extends State<QrUser> {
                       icon: const Icon(Icons.qr_code_2_rounded, color: Colors.white,),
                       style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all(Colors.red),
+                        shape: MaterialStateProperty.all(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30.0),
+                          )
+                        ),
                       ),
                     ),
                   )

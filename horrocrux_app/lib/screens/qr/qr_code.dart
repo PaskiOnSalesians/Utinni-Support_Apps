@@ -66,7 +66,7 @@ class _QrCodeState extends State<QrCode> {
                 height: MediaQuery.of(context).size.height / 2,
                 child: Column(
                   children: [
-                    QrImage(data: currentUsername,),
+                    QrImage(data: currentUserId.toString(),),
                   ],
                 ),
               ),

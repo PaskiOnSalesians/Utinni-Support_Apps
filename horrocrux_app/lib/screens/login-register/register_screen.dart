@@ -181,7 +181,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             AuthService().register(username, email, password).then((val){
                               if(val.data['success']){
                                 token = val.data['token'];
+                                currentToken = token;
                                 currentUsername = username;
+                                currentUserId = val.data["id"];
                                 Fluttertoast.showToast(
                                   msg: 'Registro correcto',
                                   toastLength: Toast.LENGTH_SHORT,

@@ -68,7 +68,7 @@ class _UserProfileState extends State<UserProfile> {
                   Row(
                     children: [
                       Text(
-                        '@' + currentUsername,
+                        currentUsername,
                         style: const TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold
@@ -180,6 +180,7 @@ class _UserProfileState extends State<UserProfile> {
                                     width: MediaQuery.of(context).size.width / 1.25,
                                     height: 2,
                                     color: Colors.black,
+                                    
                                   ),
                                 ],
                               ) 

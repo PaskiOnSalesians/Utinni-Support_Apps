@@ -145,7 +145,9 @@ class _LoginScreenState extends State<LoginScreen> {
                             AuthService().login(username, password).then((val){
                               if(val.data['success']){
                                 token = val.data['token'];
+                                currentToken = token;
                                 currentUsername = username;
+                                currentUserId = val.data["id"];
                                 Fluttertoast.showToast(
                                   msg: 'Acceso correcto',
                                   toastLength: Toast.LENGTH_SHORT,
