@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:horrocrux_app/screens/quiz_diagon/constants.dart';
-import 'package:horrocrux_app/screens/quiz_diagon/controllers/question_controller.dart';
+import 'package:horrocrux_app/screens/quiz_diagon/controllers/question_controller_diagon.dart';
 import 'package:flutter_svg/svg.dart';
 
 class ScoreScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    QuestionController _qnController = Get.put(QuestionController());
+    QuestionController_diagon _qnController = Get.put(QuestionController_diagon());
     return Scaffold(
       body: Stack(
         fit: StackFit.expand,

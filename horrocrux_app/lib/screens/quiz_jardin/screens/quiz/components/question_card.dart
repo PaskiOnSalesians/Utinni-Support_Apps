@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:horrocrux_app/screens/quiz_jardin/controllers/question_controller.dart';
+import 'package:horrocrux_app/screens/quiz_jardin/controllers/question_controller_jardin.dart';
 import 'package:horrocrux_app/screens/quiz_jardin/models/Questions.dart';
 
 import '../../../constants.dart';
@@ -17,7 +17,7 @@ class QuestionCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    QuestionController _controller = Get.put(QuestionController());
+    QuestionController_jardin _controller = Get.put(QuestionController_jardin());
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
       padding: const EdgeInsets.all(kDefaultPadding),

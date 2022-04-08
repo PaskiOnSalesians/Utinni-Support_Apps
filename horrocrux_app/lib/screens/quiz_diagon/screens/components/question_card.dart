@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:horrocrux_app/screens/quiz_diagon/controllers/question_controller.dart';
+import 'package:horrocrux_app/screens/quiz_diagon/controllers/question_controller_diagon.dart';
 import 'package:horrocrux_app/screens/quiz_diagon/models/Questions.dart';
 
-import '../../../constants.dart';
+import '../../constants.dart';
 import 'option.dart';
 
 class QuestionCard extends StatelessWidget {
@@ -17,7 +17,7 @@ class QuestionCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    QuestionController _controller = Get.put(QuestionController());
+    QuestionController_diagon _controller = Get.put(QuestionController_diagon());
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
       padding: const EdgeInsets.all(kDefaultPadding),

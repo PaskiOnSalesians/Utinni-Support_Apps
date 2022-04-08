@@ -16,7 +16,7 @@ const List sample_data = [
   {
     "id": 1,
     "question": "¿A parte de en Hogwarts, en que otra escuela mágica se sabe que imparten esta asignatura?",
-    "options": ['Castelobruxo', 'Instituto Durmstrang', 'Colegio Ilvermorny de Magia y Hechicería', 'Mahoutokoro'],
+    "options": ['Castelobruxo', 'Instituto Durmstrang', 'Colegio Ilvermorny de Magia \ny Hechicería', 'Mahoutokoro'],
     "answer_index": 0,
   },
   {

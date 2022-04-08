@@ -1,11 +1,11 @@
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:horrocrux_app/screens/quiz_diagon/models/Questions.dart';
-import 'package:horrocrux_app/screens/quiz_diagon/score/score_screen.dart';
+import 'package:horrocrux_app/screens/quiz_jardin/models/Questions.dart';
+import 'package:horrocrux_app/screens/quiz_jardin/score/score_screen.dart';
 
 // We use get package for our state management
 
-class QuestionController extends GetxController
+class QuestionController_jardin extends GetxController
     with SingleGetTickerProviderMixin {
   // Lets animated our progress bar
 

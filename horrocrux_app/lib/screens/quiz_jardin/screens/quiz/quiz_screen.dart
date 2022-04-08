@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:horrocrux_app/screens/quiz_jardin/controllers/question_controller.dart';
+import 'package:horrocrux_app/screens/quiz_jardin/controllers/question_controller_jardin.dart';
 
 import 'components/body.dart';
 
 class QuizScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    QuestionController _controller = Get.put(QuestionController());
+    QuestionController_jardin _controller = Get.put(QuestionController_jardin());
     return Scaffold(
       resizeToAvoidBottomInset: false,
       extendBodyBehindAppBar: true,

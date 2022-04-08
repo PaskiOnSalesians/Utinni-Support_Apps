@@ -5,7 +5,7 @@ import 'package:horrocrux_app/screens/quiz_general/score/score_screen.dart';
 
 // We use get package for our state management
 
-class QuestionController extends GetxController
+class QuestionController_general extends GetxController
     with SingleGetTickerProviderMixin {
   // Lets animated our progress bar
 

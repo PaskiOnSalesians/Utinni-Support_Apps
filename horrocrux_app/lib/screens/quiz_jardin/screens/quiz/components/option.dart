@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
-import 'package:horrocrux_app/screens/quiz_jardin/controllers/question_controller.dart';
+import 'package:horrocrux_app/screens/quiz_jardin/controllers/question_controller_jardin.dart';
 
 import '../../../constants.dart';
 
@@ -17,8 +17,8 @@ class Option extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<QuestionController>(
-        init: QuestionController(),
+    return GetBuilder<QuestionController_jardin>(
+        init: QuestionController_jardin(),
         builder: (qnController) {
           Color getTheRightColor() {
             if (qnController.isAnswered) {

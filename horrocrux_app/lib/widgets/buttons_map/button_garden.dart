@@ -44,11 +44,11 @@ class BottonShowJardi extends StatelessWidget {
                         ),
                       ],
                     ),
-                    const SizedBox(width: 50),
+                    const SizedBox(width: 30),
                     Column(
                       children: const [
                         Text(
-                          'Jardi botanic',
+                          'Clase de Herbología',
                           style: TextStyle(
                               color: Colors.blue,
                               fontWeight: FontWeight.bold,
@@ -56,7 +56,7 @@ class BottonShowJardi extends StatelessWidget {
                         ),
                       ],
                     ),
-                    const SizedBox(width: 50),
+                    const SizedBox(width: 30),
                     Column(
                       children: [
                         IconButton(

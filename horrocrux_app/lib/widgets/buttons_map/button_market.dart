@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:horrocrux_app/screens/quiz_diagon/screens/quiz/quiz_screen.dart';
+import 'package:horrocrux_app/screens/quiz_diagon/screens/quiz_screen.dart';
 
 class BottonShowMercat extends StatelessWidget {
   const BottonShowMercat({

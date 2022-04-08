@@ -27,7 +27,7 @@ const List sample_data = [
   },
   {
     "id": 3,
-    "question": "Antiguamente, en lugar de con una snitch, se jugaba con un animal. ¿Cómo se llamaba esa criatura?",
+    "question": "Antiguamente, en lugar de con una snitch,\nse jugaba con un animal. ¿Cómo se llamaba esa criatura?",
     "options": ['Snidget dorado', 'Snidget espacial', 'Snidget precioso', 'Snidget amarillo'],
     "answer_index": 0,
   },
@@ -46,7 +46,7 @@ const List sample_data = [
   },
   {
     "id": 6,
-    "question": "What command do you use to output data to the screen?",
+    "question": "Cada cuantos años se celebraba el campeonato de los tres magos?",
     "options": ['Cada ocho años', 'Cada cuatro años', 'Cada seis años', 'Cada cinco años'],
     "answer_index": 1,
   },

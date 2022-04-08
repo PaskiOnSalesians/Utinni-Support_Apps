@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:horrocrux_app/screens/quiz_diagon/constants.dart';
-import 'package:horrocrux_app/screens/quiz_diagon/controllers/question_controller.dart';
+import 'package:horrocrux_app/screens/quiz_diagon/controllers/question_controller_diagon.dart';
 import 'package:flutter_svg/svg.dart';
 
 import 'progress_bar.dart';
@@ -15,7 +15,7 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // So that we have acccess our controller
-    QuestionController _questionController = Get.put(QuestionController());
+    QuestionController_diagon _questionController = Get.put(QuestionController_diagon());
     return Stack(
       children: [
         SvgPicture.asset("assets/icons/bg.svg", fit: BoxFit.fill),
