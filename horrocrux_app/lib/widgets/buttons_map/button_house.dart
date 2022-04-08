@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:horrocrux_app/screens/login-register/login_screen.dart';
+import 'package:horrocrux_app/screens/quiz_general/screens/quiz/quiz_screen.dart';
 
 class BottonShowHouse extends StatelessWidget {
   const BottonShowHouse({
@@ -59,10 +60,19 @@ class BottonShowHouse extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                           fontSize: 15),
                     ),
-                    Text('Joc'),
-                    Text('Petita descripcio'),
                   ],
-                )
+                ),
+                const SizedBox(width: 30),
+                    Column(
+                      children: [
+                        IconButton(
+                          onPressed: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => QuizScreen()));
+                          },
+                          icon: const Icon(Icons.home, color: Colors.green, size: 32,)
+                        )
+                      ],
+                    )
               ],
             ),
           )

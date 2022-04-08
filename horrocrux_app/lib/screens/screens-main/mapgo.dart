@@ -133,8 +133,8 @@ class _MapgoState extends State<Mapgo> {
           });
         },
         // icon: ,
-        infoWindow: const InfoWindow(
-            title: "Colegio Hogwarts de Magia y Hechicería", snippet: "")));
+        //infoWindow: const InfoWindow(title: "Colegio Hogwarts de Magia y Hechicería", snippet: ""),
+        ));
     tmp.add(Marker(
         markerId: const MarkerId("estacio"),
         position: widget.Estacio,
@@ -143,7 +143,8 @@ class _MapgoState extends State<Mapgo> {
             pinPillPosition2 = PIN_VISIBLE_POSITION;
           });
         },
-        infoWindow: const InfoWindow(title: "Estació how")));
+        //infoWindow: const InfoWindow(title: "Estació how")
+        ));
 
     tmp.add(Marker(
         markerId: const MarkerId("Parque Quidditch"),
@@ -153,7 +154,8 @@ class _MapgoState extends State<Mapgo> {
             pinPillPosition3 = PIN_VISIBLE_POSITION;
           });
         },
-        infoWindow: const InfoWindow(title: "Campo Quidditch")));
+        //infoWindow: const InfoWindow(title: "Campo Quidditch")
+        ));
     tmp.add(Marker(
         markerId: const MarkerId("Bosque"),
         position: widget.BosqueSarria,
@@ -162,7 +164,8 @@ class _MapgoState extends State<Mapgo> {
             pinPillPosition4 = PIN_VISIBLE_POSITION;
           });
         },
-        infoWindow: const InfoWindow(title: "BosqueSarria")));
+        //infoWindow: const InfoWindow(title: "BosqueSarria")
+        ));
     tmp.add(Marker(
         markerId: const MarkerId("CasesHarry"),
         position: widget.CasasSarria,
@@ -171,7 +174,8 @@ class _MapgoState extends State<Mapgo> {
             pinPillPosition5 = PIN_VISIBLE_POSITION;
           });
         },
-        infoWindow: const InfoWindow(title: "vive aqui")));
+        //infoWindow: const InfoWindow(title: "vive aqui")
+        ));
     tmp.add(Marker(
         markerId: const MarkerId("jardins"),
         position: widget.JardinesSarria,
@@ -180,7 +184,8 @@ class _MapgoState extends State<Mapgo> {
             pinPillPosition6 = PIN_VISIBLE_POSITION;
           });
         },
-        infoWindow: const InfoWindow(title: "jardins de botanoca")));
+        //infoWindow: const InfoWindow(title: "jardins de botanoca")
+        ));
     tmp.add(Marker(
         markerId: const MarkerId("mercado"),
         position: widget.MercatSarria,
@@ -189,7 +194,8 @@ class _MapgoState extends State<Mapgo> {
             pinPillPosition7 = PIN_VISIBLE_POSITION;
           });
         },
-        infoWindow: const InfoWindow(title: "mercat on comprar coses")));
+        //infoWindow: const InfoWindow(title: "mercat on comprar coses")
+        ));
 
     return tmp;
   }

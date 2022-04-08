@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:horrocrux_app/screens/broom_game/homepage.dart';
 
 class BottonShowParque extends StatelessWidget {
   const BottonShowParque({
@@ -59,8 +60,17 @@ class BottonShowParque extends StatelessWidget {
                               fontWeight: FontWeight.bold,
                               fontSize: 15),
                         ),
-                        Text('Joc'),
-                        Text('Mic mic'),
+                      ],
+                    ),
+                    const SizedBox(width: 30),
+                    Column(
+                      children: [
+                        IconButton(
+                          onPressed: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => const BroomGame()));
+                          },
+                          icon: const Icon(Icons.home, color: Colors.green, size: 32,)
+                        )
                       ],
                     )
                   ],

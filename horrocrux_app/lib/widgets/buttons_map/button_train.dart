@@ -24,12 +24,6 @@ class BottonShowTrain extends StatelessWidget {
         decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(40),
-            // boxShadow: [
-            //   BoxShadow(
-            //       color: Colors.black.withOpacity(0.2),
-            //       blurRadius: 10,
-            //       offset: Offset.zero)
-            // ]
             ),
         child: Column(children: [
           Container(
@@ -53,14 +47,12 @@ class BottonShowTrain extends StatelessWidget {
                 Column(
                   children: const [
                     Text(
-                      'Estacio Kings Cross',
+                      'Estación Kings Cross',
                       style: TextStyle(
                           color: Colors.blue,
                           fontWeight: FontWeight.bold,
                           fontSize: 15),
                     ),
-                    Text('Joc'),
-                    Text('Mic mic'),
                   ],
                 )
               ],
