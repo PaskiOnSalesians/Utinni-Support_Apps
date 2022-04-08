@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:horrocrux_app/components/menu/main_menu.dart';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({Key? key}) : super(key: key);
@@ -49,62 +50,67 @@ class _SettingsPageState extends State<SettingsPage> {
       ),
       body: Container(
         padding: const EdgeInsets.only(left: 30, right: 30),
-        child: ListView(
+        child: Stack(
           children: [
-            const SizedBox(height: 10.0),
-            Row(
-              children: const [
-                Text(
-                  'GENERAL',
-                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+            ListView(
+              children: [
+                const SizedBox(height: 10.0),
+                Row(
+                  children: const [
+                    Text(
+                      'GENERAL',
+                      style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                    ),
+                  ],
                 ),
+                const Divider(
+                  height: 2,
+                  thickness: 2,
+                  color: Colors.black,
+                ),
+                const SizedBox(height: 10),
+                buildAccountOption(context, "Languages"),
+                buildAccountOption(context, "Themes"),
+                buildOnOffOption("Sounds in app", valSounds, onChangeSound),
+                const SizedBox(height: 30.0),
+                Row(
+                  children: const [
+                    Text(
+                      'NOTIFICATIONS',
+                      style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
+                const Divider(
+                  height: 2,
+                  thickness: 2,
+                  color: Colors.black,
+                ),
+                const SizedBox(height: 10),
+                buildOnOffOption(
+                    "Notifications", valNotifications, onChangeNotifications),
+                const SizedBox(height: 30.0),
+                Row(
+                  children: const [
+                    Text(
+                      'HELP & SUPPORT',
+                      style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
+                const Divider(
+                  height: 2,
+                  thickness: 2,
+                  color: Colors.black,
+                ),
+                const SizedBox(height: 10),
+                buildAccountOption(context, "Help"),
+                buildAccountOption(context, "FAQ"),
+                const SizedBox(height: 30),
+                const ButtonBar()
               ],
             ),
-            const Divider(
-              height: 2,
-              thickness: 2,
-              color: Colors.black,
-            ),
-            const SizedBox(height: 10),
-            buildAccountOption(context, "Languages"),
-            buildAccountOption(context, "Themes"),
-            buildOnOffOption("Sounds in app", valSounds, onChangeSound),
-            const SizedBox(height: 30.0),
-            Row(
-              children: const [
-                Text(
-                  'NOTIFICATIONS',
-                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-                ),
-              ],
-            ),
-            const Divider(
-              height: 2,
-              thickness: 2,
-              color: Colors.black,
-            ),
-            const SizedBox(height: 10),
-            buildOnOffOption(
-                "Notifications", valNotifications, onChangeNotifications),
-            const SizedBox(height: 30.0),
-            Row(
-              children: const [
-                Text(
-                  'HELP & SUPPORT',
-                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-                ),
-              ],
-            ),
-            const Divider(
-              height: 2,
-              thickness: 2,
-              color: Colors.black,
-            ),
-            const SizedBox(height: 10),
-            buildAccountOption(context, "Help"),
-            buildAccountOption(context, "FAQ"),
-            const SizedBox(height: 30),
-            const ButtonBar()
+            const MainMenu()
           ],
         ),
       ),

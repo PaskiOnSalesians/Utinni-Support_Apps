@@ -66,7 +66,7 @@ class AuthService {
     }
   }
 
-  getFriends(currentUserId) async{
+  getUserData(currentUserId) async{
     try{
       dio.options.headers['x-access-token'] = currentToken;
       return await dio.get('http://51.83.97.10:3000/api/users/' + currentUserId);

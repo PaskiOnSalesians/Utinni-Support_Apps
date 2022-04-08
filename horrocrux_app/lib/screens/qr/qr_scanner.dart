@@ -15,8 +15,6 @@ class ScanScreen extends StatefulWidget {
 }
 
 class _ScanState extends State<ScanScreen> {
-  String _scanBarcode = 'Unknown';
-
   @override
   initState() {
     super.initState();
@@ -26,7 +24,7 @@ class _ScanState extends State<ScanScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('QR Code Scanner'),
+          title: const Text('Escáner QR'),
           backgroundColor: Colors.purple,
         ),
         body: Center(
@@ -59,14 +57,14 @@ class _ScanState extends State<ScanScreen> {
                   ),
                 ),
               ),
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-                child: Text(
-                  newFriend = _scanBarcode,
-                  textAlign: TextAlign.center,
-                ),
-              ),
+              // Padding(
+              //   padding:
+              //       const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+              //   child: Text(
+              //     newFriend = _scanBarcode,
+              //     textAlign: TextAlign.center,
+              //   ),
+              // ),
             ],
           ),
         ));
@@ -97,10 +95,6 @@ class _ScanState extends State<ScanScreen> {
     }
 
     if (!mounted) return;
-
-    setState(() {
-      _scanBarcode = barcodeScanRes;
-    });
   }
 
   Future<void> scanBarcodeNormal() async {
@@ -115,9 +109,5 @@ class _ScanState extends State<ScanScreen> {
     }
 
     if (!mounted) return;
-
-    setState(() {
-      _scanBarcode = barcodeScanRes;
-    });
   }
 }
